@@ -35,10 +35,10 @@ Medicare is an Android-based application designed to simplify healthcare access.
 ![Register Page](Regis.jpg)
 
 ### 2. Home Page
-![Home Page](Login.jpg)
+![Home Page](home.jpg)
 
 ### 3. Book Appointment Page
-![Book Appointment](assets/appointment_page.png)
+![Book Appointment](bookappointment.jpg)
 
 ### 4. Buy Medicine Page
 ![Buy Medicine](assets/buy_medicine.png)
