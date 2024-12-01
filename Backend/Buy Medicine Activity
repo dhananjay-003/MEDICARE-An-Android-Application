@@ -1,0 +1,33 @@
+package com.example.healthcare
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+
+class BuyMedActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_buy_med)
+        val btn = findViewById<Button>(R.id.buttonmedRegLogin)
+        val med=findViewById<EditText>(R.id.editTextmedName1)
+        val quantity=findViewById<EditText>(R.id.editmedAddress1)
+        val dosage=findViewById<EditText>(R.id.editTextmedkno1)
+        val daddress=findViewById<EditText>(R.id.editTextDate1)
+
+        btn.setOnClickListener {
+            val medicine = med.text.toString()
+            val medquantity = quantity.text.toString()
+            val meddosage = dosage.text.toString()
+            val address = daddress.text.toString()
+            if (medicine.isEmpty() || medquantity.isEmpty() || meddosage.isEmpty() || address.isEmpty()) {
+                Toast.makeText(this, "Please fill All Details", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Ordered Successfully", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+    }
+}
