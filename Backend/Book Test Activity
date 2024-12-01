@@ -1,0 +1,30 @@
+package com.example.healthcare
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+
+class BookTestactivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_book_testactivity)
+        val btn=findViewById<Button>(R.id.buttonRegLogin2)
+        val bname =findViewById<EditText>(R.id.editTextFullName1)
+        val baddress=findViewById<EditText>(R.id.editTextAddress1)
+        val cno=findViewById<EditText>(R.id.editTextbookno1)
+        val bdate=findViewById<EditText>(R.id.editTextDate1)
+        btn.setOnClickListener {
+            val Fullname = bname.text.toString()
+            val bookaddress = baddress.text.toString()
+            val contactno = cno.text.toString()
+            val bookdate = bdate.text.toString()
+            if (Fullname.isEmpty() || bookaddress.isEmpty() || contactno.isEmpty() || bookdate.isEmpty()) {
+                Toast.makeText(this, "Please fill All Details", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Test booked Successfully", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}
