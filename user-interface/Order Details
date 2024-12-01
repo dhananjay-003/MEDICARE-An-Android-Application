@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appNameorderdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEDICARE"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"/>
+
+    <!-- Top Doctors Title -->
+    <TextView
+        android:id="@+id/topDoctorsdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appNameorderdetail"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:text=" Your Orders"
+        android:textColor="#66CA30"
+        android:textSize="20sp" />
+
+    <!-- Grid for Doctors -->
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topDoctorsdetails"
+        android:columnCount="2"
+        android:layout_margin="20dp"
+        android:rowCount="3">
+
+        <!-- Family Physician -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Appointments"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="159dp"
+                android:layout_height="162dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="288dp"
+                    android:layout_height="88dp"
+                    android:src="@drawable/appointent" />
+
+                <TextView
+                    android:layout_width="133dp"
+                    android:layout_height="35dp"
+                    android:text="Appointments"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/LabTest"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="129dp"
+                android:layout_height="149dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="358dp"
+                    android:layout_height="112dp"
+                    android:src="@drawable/lan_test" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="33dp"
+                    android:text="Lab Test"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/medicines1"
+            android:layout_width="33dp"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="138dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="264dp"
+                    android:layout_height="96dp"
+                    android:src="@drawable/medicin_order" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="33dp"
+                    android:text="Medicines"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</RelativeLayout>
