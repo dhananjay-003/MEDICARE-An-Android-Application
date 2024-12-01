@@ -1,0 +1,44 @@
+package com.example.healthcare
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Toast
+import androidx.cardview.widget.CardView
+
+class LabTestActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_lab_test)
+        val Blood=findViewById<CardView>(R.id.bloodTest)
+        Blood.setOnClickListener{
+            startActivity(Intent(this@LabTestActivity,BookTestactivity::class.java))
+            Toast.makeText(this,"Selected Blood test",Toast.LENGTH_SHORT).show()
+        }
+        val harmone=findViewById<CardView>(R.id.cardHaramoneTest)
+        harmone.setOnClickListener{
+            startActivity(Intent(this@LabTestActivity,BookTestactivity::class.java))
+            Toast.makeText(this,"Selected Harmone  test",Toast.LENGTH_SHORT).show()
+        }
+        val pregnancy=findViewById<CardView>(R.id.cardPregnancyTest)
+        pregnancy.setOnClickListener{
+            startActivity(Intent(this@LabTestActivity,BookTestactivity::class.java))
+            Toast.makeText(this,"Selected Pregnancy test",Toast.LENGTH_SHORT).show()
+        }
+        val lipid=findViewById<CardView>(R.id.CardLipidprofile)
+        lipid.setOnClickListener{
+            startActivity(Intent(this@LabTestActivity,BookTestactivity::class.java))
+            Toast.makeText(this,"Selected Lipid profile test",Toast.LENGTH_SHORT).show()
+        }
+        val thyroid=findViewById<CardView>(R.id.cardThyroidTest)
+        thyroid.setOnClickListener{
+            startActivity(Intent(this@LabTestActivity,BookTestactivity::class.java))
+            Toast.makeText(this,"Selected Thyroid test",Toast.LENGTH_SHORT).show()
+        }
+        val urine=findViewById<CardView>(R.id.cardUrineanalysisTest)
+        urine.setOnClickListener{
+            startActivity(Intent(this@LabTestActivity,BookTestactivity::class.java))
+            Toast.makeText(this,"Selected Urinalysis test",Toast.LENGTH_SHORT).show()
+        }
+    }
+}
